@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Progression: Shuttles</name>
+	<author>mt3</author>
+	<packageId>mt3.progressionshuttles</packageId>
+	<supportedVersions>
+		<li>1.5</li>
+		<li>1.6</li>
+	</supportedVersions>
+	<description>Integrates multiple shuttles mods into a seamless experience.</description>
+	<loadAfter>
+		<li>Ludeon.Rimworld</li>
+		<li>Ludeon.Rimworld.Royalty</li>
+		<li>Ludeon.Rimworld.Ideology</li>
+		<li>Ludeon.Rimworld.Biotech</li>
+		<li>Ludeon.Rimworld.Anomaly</li>
+		<li>ferny.progressioncore</li>
+		<li>TurboPickle.GravShuttle</li>
+		<li>antediluvianjunk.Odyssey.Transport.Shuttle</li>
+		<li>misstalls.VRShuttle</li>
+		<li>barbedwire.UltratecPassengerShuttle</li>
+		<li>mrwireman.StealthShuttle</li>
+		<li>smallmine.HeavyShuttle</li>
+		<li>Ludeon.Rimworld</li>
+		<li>Ludeon.Rimworld</li>
+		
+	</loadAfter>
+</ModMetaData>

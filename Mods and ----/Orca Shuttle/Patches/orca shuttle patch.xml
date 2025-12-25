@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.odyssey, oskarpotocki.vanillavehiclesexpanded, smallmine.HeavyShuttle">
+        <xpath>Defs/ThingDef[defName="OrcaShuttle"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+				<!-- patch label and descripstion -->
+				<!--<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="TransportJunk"]/label</xpath>
+						<value>
+							<label>Makeshift Shuttles</label>
+						</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="TransportJunk"]/description</xpath>
+						<value>
+							<description>Learn how to build a makeshift shuttle by strapping a shuttle engine to a vehicle.</description>
+						</value>
+				</li>-->
+				<!-- patch label and descripstion -->
+				<!--<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="OrcaShuttle"]/label</xpath>
+						<value>
+							<label>Logistics Shuttle</label>
+						</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="OrcaShuttle"]/description</xpath>
+						<value>
+							<description>an advanced shuttle specialized for transporting heavy cargo across large distances. It features a relatively short engine cooldownan and an economic fuel consumption rate compared to its predecessors which saves fuel space for cargo.</description>
+						</value>
+				</li>-->
+				<!-- patch research prerequisites -->
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/researchPrerequisites</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/researchPrerequisites</xpath>
+                        <value>
+							<researchPrerequisites>
+								<li>BasicGravtech</li>
+								<li>Shuttles</li>
+								<li>AdvancedFabrication</li>
+							</researchPrerequisites>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]</xpath>
+                        <value>
+							<researchPrerequisites>
+								<li>BasicGravtech</li>
+								<li>Shuttles</li>
+								<li>AdvancedFabrication</li>
+							</researchPrerequisites>
+                        </value>
+                    </nomatch>
+                </li>
+				<!-- patch cost list -->
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]</xpath>
+                        <value>
+                            <costList/>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/Steel</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/Steel</xpath>
+                        <value>
+                            <Steel>700</Steel>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <Steel>700</Steel>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/Plasteel</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/Plasteel</xpath>
+                        <value>
+                            <Plasteel>300</Plasteel>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <Plasteel>300</Plasteel>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/Gold</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/Gold</xpath>
+                        <value>
+                            <Gold>120</Gold>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <Gold>120</Gold>
+                        </value>
+                    </nomatch>
+                </li>-->
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/ComponentIndustrial</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/ComponentIndustrial</xpath>
+                        <value>
+                            <ComponentIndustrial>12</ComponentIndustrial>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <ComponentIndustrial>12</ComponentIndustrial>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/ComponentSpacer</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/ComponentSpacer</xpath>
+                        <value>
+                            <ComponentSpacer>6</ComponentSpacer>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <ComponentSpacer>6</ComponentSpacer>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarFuelTank</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarFuelTank</xpath>
+                        <value>
+                            <VVE_CarFuelTank>10</VVE_CarFuelTank>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarFuelTank>10</VVE_CarFuelTank>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarBattery</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarBattery</xpath>
+                        <value>
+                            <VVE_CarBattery>4</VVE_CarBattery>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarBattery>4</VVE_CarBattery>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarWiring</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarWiring</xpath>
+                        <value>
+                            <VVE_CarWiring>8</VVE_CarWiring>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarWiring>8</VVE_CarWiring>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarExhaust</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarExhaust</xpath>
+                        <value>
+                            <VVE_CarExhaust>8</VVE_CarExhaust>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarExhaust>8</VVE_CarExhaust>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarSuspension</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarSuspension</xpath>
+                        <value>
+                            <VVE_CarSuspension>8</VVE_CarSuspension>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarSuspension>8</VVE_CarSuspension>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarAlternator</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_CarAlternator</xpath>
+                        <value>
+                            <VVE_CarAlternator>4</VVE_CarAlternator>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarAlternator>4</VVE_CarAlternator>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_EngineBlock</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/VVE_EngineBlock</xpath>
+                        <value>
+                            <VVE_EngineBlock>2</VVE_EngineBlock>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_EngineBlock>2</VVE_EngineBlock>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/Gravcore</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/Gravcore</xpath>
+                        <value>
+                            <Gravcore>1</Gravcore>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <Gravcore>1</Gravcore>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/GravlitePanel</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList/GravlitePanel</xpath>
+                        <value>
+                            <GravlitePanel>120</GravlitePanel>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/costList</xpath>
+                        <value>
+                            <GravlitePanel>120</GravlitePanel>
+                        </value>
+                    </nomatch>
+                </li>-->
+				<!-- patch comps -->
+				<!--<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/fuelPerTile</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/fuelPerTile</xpath>
+                        <value>
+                            <fuelPerTile>3.5</fuelPerTile>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"</xpath>
+                        <value>
+                            <fuelPerTile>3.5</fuelPerTile>
+                        </value>
+                    </nomatch>
+                </li>
+				<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/cooldownTicks</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/cooldownTicks</xpath>
+                        <value>
+                            <cooldownTicks>2500</cooldownTicks>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"</xpath>
+                        <value>
+                            <cooldownTicks>2500</cooldownTicks>
+                        </value>
+                    </nomatch>
+                </li>-->
+				<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/fixedLaunchDistanceMax</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/fixedLaunchDistanceMax</xpath>
+                        <value>
+                            <fixedLaunchDistanceMax>93</fixedLaunchDistanceMax>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"</xpath>
+                        <value>
+                            <fixedLaunchDistanceMax>93</fixedLaunchDistanceMax>
+                        </value>
+                    </nomatch>
+                </li>
+				<!--<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Transporter"/massCapacity</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Transporter"/massCapacity</xpath>
+                        <value>
+                            <massCapacity>2200</massCapacity>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Transporter"</xpath>
+                        <value>
+                            <massCapacity>2200</massCapacity>
+                        </value>
+                    </nomatch>
+                </li>-->
+				<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Refuelable"/fuelCapacity</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Refuelable"/fuelCapacity</xpath>
+                        <value>
+                            <fuelCapacity>1000</fuelCapacity>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Refuelable"</xpath>
+                        <value>
+                            <fuelCapacity>1000</fuelCapacity>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

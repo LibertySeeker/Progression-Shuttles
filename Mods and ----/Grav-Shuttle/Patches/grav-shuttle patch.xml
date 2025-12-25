@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.odyssey, oskarpotocki.vanillavehiclesexpanded, TurboPickle.GravShuttle">
+        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+				<!-- patch label and descripstion -->
+				<!--<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VFE_Manufacturing"]/label</xpath>
+						<value>
+							<label>Large production benches</label>
+						</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="VFE_Manufacturing"]/description</xpath>
+						<value>
+							<description>Build manufacturing benches of larger size and efficency.</description>
+						</value>
+				</li>-->
+				<!-- patch research prerequisites -->
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/researchPrerequisites</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/researchPrerequisites</xpath>
+                        <value>
+							<researchPrerequisites>
+								<li>BasicGravtech</li>
+								<li>Shuttles</li>
+								<li>AdvancedFabrication</li>
+							</researchPrerequisites>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]</xpath>
+                        <value>
+							<researchPrerequisites>
+								<li>BasicGravtech</li>
+								<li>Shuttles</li>
+								<li>AdvancedFabrication</li>
+							</researchPrerequisites>
+                        </value>
+                    </nomatch>
+                </li>
+				<!-- patch cost list -->
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]</xpath>
+                        <value>
+                            <costList/>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/Steel</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/Steel</xpath>
+                        <value>
+                            <Steel>300</Steel>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <Steel>300</Steel>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/Plasteel</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/Plasteel</xpath>
+                        <value>
+                            <Plasteel>200</Plasteel>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <Plasteel>200</Plasteel>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/ComponentIndustrial</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/ComponentIndustrial</xpath>
+                        <value>
+                            <ComponentIndustrial>8</ComponentIndustrial>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <ComponentIndustrial>8</ComponentIndustrial>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/ComponentSpacer</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/ComponentSpacer</xpath>
+                        <value>
+                            <ComponentSpacer>6</ComponentSpacer>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <ComponentSpacer>6</ComponentSpacer>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarFuelTank</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarFuelTank</xpath>
+                        <value>
+                            <VVE_CarFuelTank>8</VVE_CarFuelTank>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarFuelTank>8</VVE_CarFuelTank>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarBattery</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarBattery</xpath>
+                        <value>
+                            <VVE_CarBattery>4</VVE_CarBattery>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarBattery>4</VVE_CarBattery>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarWiring</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarWiring</xpath>
+                        <value>
+                            <VVE_CarWiring>8</VVE_CarWiring>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarWiring>8</VVE_CarWiring>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarExhaust</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarExhaust</xpath>
+                        <value>
+                            <VVE_CarExhaust>4</VVE_CarExhaust>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarExhaust>4</VVE_CarExhaust>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarSuspension</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarSuspension</xpath>
+                        <value>
+                            <VVE_CarSuspension>6</VVE_CarSuspension>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarSuspension>6</VVE_CarSuspension>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarAlternator</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarAlternator</xpath>
+                        <value>
+                            <VVE_CarAlternator>4</VVE_CarAlternator>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarAlternator>4</VVE_CarAlternator>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/Gravcore</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/Gravcore</xpath>
+                        <value>
+                            <Gravcore>1</Gravcore>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <Gravcore>1</Gravcore>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/GravlitePanel</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/GravlitePanel</xpath>
+                        <value>
+                            <GravlitePanel>70</GravlitePanel>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <value>
+                            <GravlitePanel>70</GravlitePanel>
+                        </value>
+                    </nomatch>
+                </li>-->
+            </operations>
+        </match>
+    </Operation>
+</Patch>

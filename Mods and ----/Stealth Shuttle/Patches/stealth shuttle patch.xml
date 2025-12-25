@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.odyssey, oskarpotocki.vanillavehiclesexpanded, mrwireman.StealthShuttle">
+        <xpath>Defs/ThingDef[defName="StealthShuttle"]</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+				<!-- patch label and descripstion -->
+				<!--<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="TransportJunk"]/label</xpath>
+						<value>
+							<label>Makeshift Shuttles</label>
+						</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName="TransportJunk"]/description</xpath>
+						<value>
+							<description>Learn how to build a makeshift shuttle by strapping a shuttle engine to a vehicle.</description>
+						</value>
+				</li>-->
+				<!-- patch label and descripstion -->
+				<!--<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="StealthShuttle"]/label</xpath>
+						<value>
+							<label>Ultratech Passenger Shuttle</label>
+						</value>
+				</li>-->
+				<!--<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="StealthShuttle"]/description</xpath>
+						<value>
+							<description>an advanced shuttle specialized for transporting heavy cargo across large distances. It features a relatively short engine cooldownan and an economic fuel consumption rate compared to its predecessors which saves fuel space for cargo.</description>
+						</value>
+				</li>-->
+				<!-- patch research prerequisites -->
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/researchPrerequisites</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/researchPrerequisites</xpath>
+                        <value>
+							<researchPrerequisites>
+								<li>Shuttles</li>
+								<li>StandardGravtech</li>
+								<li>AdvancedFabrication</li>
+							</researchPrerequisites>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]</xpath>
+                        <value>
+							<researchPrerequisites>
+								<li>Shuttles</li>
+								<li>StandardGravtech</li>
+								<li>AdvancedFabrication</li>
+							</researchPrerequisites>
+                        </value>
+                    </nomatch>
+                </li>
+				<!-- patch cost list -->
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]</xpath>
+                        <value>
+                            <costList/>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Steel</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Steel</xpath>
+                        <value>
+                            <Steel>250</Steel>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <Steel>250</Steel>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Plasteel</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Plasteel</xpath>
+                        <value>
+                            <Plasteel>300</Plasteel>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <Plasteel>300</Plasteel>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Gold</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Gold</xpath>
+                        <value>
+                            <Gold>120</Gold>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <Gold>120</Gold>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Silver</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Silver</xpath>
+                        <value>
+                            <Silver>480</Silver>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <Silver>480</Silver>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Shard</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Shard</xpath>
+                        <value>
+                            <Shard>2</Shard>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <Shard>2</Shard>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Bioferrite</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Bioferrite</xpath>
+                        <value>
+                            <Bioferrite>160</Bioferrite>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <Bioferrite>160</Bioferrite>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/ComponentIndustrial</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/ComponentIndustrial</xpath>
+                        <value>
+                            <ComponentIndustrial>12</ComponentIndustrial>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <ComponentIndustrial>12</ComponentIndustrial>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/ComponentSpacer</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/ComponentSpacer</xpath>
+                        <value>
+                            <ComponentSpacer>10</ComponentSpacer>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <ComponentSpacer>10</ComponentSpacer>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarFuelTank</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarFuelTank</xpath>
+                        <value>
+                            <VVE_CarFuelTank>6</VVE_CarFuelTank>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarFuelTank>6</VVE_CarFuelTank>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarBattery</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarBattery</xpath>
+                        <value>
+                            <VVE_CarBattery>4</VVE_CarBattery>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarBattery>4</VVE_CarBattery>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarWiring</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarWiring</xpath>
+                        <value>
+                            <VVE_CarWiring>8</VVE_CarWiring>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarWiring>8</VVE_CarWiring>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarExhaust</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarExhaust</xpath>
+                        <value>
+                            <VVE_CarExhaust>4</VVE_CarExhaust>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarExhaust>4</VVE_CarExhaust>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarSuspension</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarSuspension</xpath>
+                        <value>
+                            <VVE_CarSuspension>8</VVE_CarSuspension>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarSuspension>8</VVE_CarSuspension>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarAlternator</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_CarAlternator</xpath>
+                        <value>
+                            <VVE_CarAlternator>6</VVE_CarAlternator>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_CarAlternator>6</VVE_CarAlternator>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_EngineBlock</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/VVE_EngineBlock</xpath>
+                        <value>
+                            <VVE_EngineBlock>2</VVE_EngineBlock>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <VVE_EngineBlock>2</VVE_EngineBlock>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Gravcore</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/Gravcore</xpath>
+                        <value>
+                            <Gravcore>1</Gravcore>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <Gravcore>1</Gravcore>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/GravlitePanel</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList/GravlitePanel</xpath>
+                        <value>
+                            <GravlitePanel>120</GravlitePanel>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/costList</xpath>
+                        <value>
+                            <GravlitePanel>120</GravlitePanel>
+                        </value>
+                    </nomatch>
+                </li>-->
+				<!-- patch comps -->
+				<!--<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Launchable"/fuelPerTile</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Launchable"/fuelPerTile</xpath>
+                        <value>
+                            <fuelPerTile>3.5</fuelPerTile>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Launchable"</xpath>
+                        <value>
+                            <fuelPerTile>3.5</fuelPerTile>
+                        </value>
+                    </nomatch>
+                </li>-->
+				<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Launchable"/cooldownTicks</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Launchable"/cooldownTicks</xpath>
+                        <value>
+                            <cooldownTicks>1250</cooldownTicks>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Launchable"</xpath>
+                        <value>
+                            <cooldownTicks>1250</cooldownTicks>
+                        </value>
+                    </nomatch>
+                </li>
+				<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Launchable"/fixedLaunchDistanceMax</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Launchable"/fixedLaunchDistanceMax</xpath>
+                        <value>
+                            <fixedLaunchDistanceMax>248</fixedLaunchDistanceMax>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Launchable"</xpath>
+                        <value>
+                            <fixedLaunchDistanceMax>248</fixedLaunchDistanceMax>
+                        </value>
+                    </nomatch>
+                </li>
+				<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Transporter"/massCapacity</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Transporter"/massCapacity</xpath>
+                        <value>
+                            <massCapacity>800</massCapacity>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Transporter"</xpath>
+                        <value>
+                            <massCapacity>800</massCapacity>
+                        </value>
+                    </nomatch>
+                </li>
+				<li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Refuelable"/fuelCapacity</xpath>
+
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Refuelable"/fuelCapacity</xpath>
+                        <value>
+                            <fuelCapacity>600</fuelCapacity>
+                        </value>
+                    </match>
+
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StealthShuttle"]/comps/li Class="CompProperties_Refuelable"</xpath>
+                        <value>
+                            <fuelCapacity>600</fuelCapacity>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
