@@ -302,7 +302,7 @@
                             <GravlitePanel>90</GravlitePanel>
                         </value>
                     </nomatch>
-                </li>-->
+                </li>
 				<!-- patch comps -->
 				<!--<li Class="PatchOperationConditional">
                     <xpath>Defs/ThingDef[defName="UltratecPassengerShuttle"]/comps/li Class="CompProperties_Launchable"/fuelPerTile</xpath>
