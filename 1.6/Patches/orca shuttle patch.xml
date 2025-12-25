@@ -305,85 +305,85 @@
                 </li>
 				<!-- patch comps -->
 				<!--<li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/fuelPerTile</xpath>
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Launchable"]/fuelPerTile</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/fuelPerTile</xpath>
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Launchable"]/fuelPerTile</xpath>
                         <value>
                             <fuelPerTile>3.5</fuelPerTile>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"</xpath>
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Launchable"]</xpath>
                         <value>
                             <fuelPerTile>3.5</fuelPerTile>
                         </value>
                     </nomatch>
                 </li>
 				<li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/cooldownTicks</xpath>
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Launchable"]/cooldownTicks</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/cooldownTicks</xpath>
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Launchable"]/cooldownTicks</xpath>
                         <value>
                             <cooldownTicks>2500</cooldownTicks>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"</xpath>
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Launchable"]</xpath>
                         <value>
                             <cooldownTicks>2500</cooldownTicks>
                         </value>
                     </nomatch>
                 </li>-->
 				<li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/fixedLaunchDistanceMax</xpath>
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Launchable"]/fixedLaunchDistanceMax</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"/fixedLaunchDistanceMax</xpath>
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Launchable"]/fixedLaunchDistanceMax</xpath>
                         <value>
                             <fixedLaunchDistanceMax>93</fixedLaunchDistanceMax>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Launchable"</xpath>
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Launchable"]</xpath>
                         <value>
                             <fixedLaunchDistanceMax>93</fixedLaunchDistanceMax>
                         </value>
                     </nomatch>
                 </li>
 				<!--<li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Transporter"/massCapacity</xpath>
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Transporter"]/massCapacity</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Transporter"/massCapacity</xpath>
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Transporter"]/massCapacity</xpath>
                         <value>
                             <massCapacity>2200</massCapacity>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Transporter"</xpath>
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Transporter"]</xpath>
                         <value>
                             <massCapacity>2200</massCapacity>
                         </value>
                     </nomatch>
                 </li>-->
 				<li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Refuelable"/fuelCapacity</xpath>
+                    <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Refuelable"/fuelCapacity</xpath>
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
                         <value>
                             <fuelCapacity>1000</fuelCapacity>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li Class="CompProperties_Refuelable"</xpath>
+                        <xpath>Defs/ThingDef[defName="OrcaShuttle"]/comps/li[@Class="CompProperties_Refuelable"]</xpath>
                         <value>
                             <fuelCapacity>1000</fuelCapacity>
                         </value>

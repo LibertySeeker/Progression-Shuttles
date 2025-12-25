@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.odyssey, oskarpotocki.vanillavehiclesexpanded, antediluvianjunk.Odyssey.Transport.Shuttle">
-        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]</xpath>
+        <xpath>Defs/ThingDef[defName="JunkShuttle"]</xpath>
         <match Class="PatchOperationSequence">
             <operations>
 				<!-- patch label and descripstion -->
@@ -32,9 +32,9 @@
 				</li>
 				<!-- patch research prerequisites -->
                 <!--<li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/researchPrerequisites</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/researchPrerequisites</xpath>
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/researchPrerequisites</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/researchPrerequisites</xpath>
                         <value>
 							<researchPrerequisites>
 								<li>TransportPods</li>
@@ -44,7 +44,7 @@
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]</xpath>
                         <value>
 							<researchPrerequisites>
 								<li>TransportPods</li>
@@ -115,153 +115,153 @@
                     </nomatch>
                 </li>
                 <!--<li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/ComponentSpacer</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/ComponentSpacer</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/ComponentSpacer</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/ComponentSpacer</xpath>
                         <value>
                             <ComponentSpacer>6</ComponentSpacer>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList</xpath>
                         <value>
                             <ComponentSpacer>6</ComponentSpacer>
                         </value>
                     </nomatch>
                 </li>
                 <li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarFuelTank</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarFuelTank</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarFuelTank</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarFuelTank</xpath>
                         <value>
                             <VVE_CarFuelTank>8</VVE_CarFuelTank>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList</xpath>
                         <value>
                             <VVE_CarFuelTank>8</VVE_CarFuelTank>
                         </value>
                     </nomatch>
                 </li>
                 <li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarBattery</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarBattery</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarBattery</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarBattery</xpath>
                         <value>
                             <VVE_CarBattery>4</VVE_CarBattery>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList</xpath>
                         <value>
                             <VVE_CarBattery>4</VVE_CarBattery>
                         </value>
                     </nomatch>
                 </li>
                 <li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarWiring</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarWiring</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarWiring</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarWiring</xpath>
                         <value>
                             <VVE_CarWiring>8</VVE_CarWiring>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList</xpath>
                         <value>
                             <VVE_CarWiring>8</VVE_CarWiring>
                         </value>
                     </nomatch>
                 </li>-->
                 <li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarExhaust</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarExhaust</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarExhaust</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarExhaust</xpath>
                         <value>
                             <VVE_CarExhaust>2</VVE_CarExhaust>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList</xpath>
                         <value>
                             <VVE_CarExhaust>2</VVE_CarExhaust>
                         </value>
                     </nomatch>
                 </li>
                 <li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarSuspension</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarSuspension</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarSuspension</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarSuspension</xpath>
                         <value>
                             <VVE_CarSuspension>4</VVE_CarSuspension>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList</xpath>
                         <value>
                             <VVE_CarSuspension>4</VVE_CarSuspension>
                         </value>
                     </nomatch>
                 </li>
                 <li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarAlternator</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarAlternator</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/VVE_CarAlternator</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/VVE_CarAlternator</xpath>
                         <value>
                             <VVE_CarAlternator>1</VVE_CarAlternator>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList</xpath>
                         <value>
                             <VVE_CarAlternator>1</VVE_CarAlternator>
                         </value>
                     </nomatch>
                 </li>
                 <!--<li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/Gravcore</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/Gravcore</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/Gravcore</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/Gravcore</xpath>
                         <value>
                             <Gravcore>1</Gravcore>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList</xpath>
                         <value>
                             <Gravcore>1</Gravcore>
                         </value>
                     </nomatch>
                 </li>
                 <li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/GravlitePanel</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/GravlitePanel</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList/GravlitePanel</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/GravlitePanel</xpath>
                         <value>
                             <GravlitePanel>70</GravlitePanel>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/costList</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList</xpath>
                         <value>
                             <GravlitePanel>70</GravlitePanel>
                         </value>
@@ -269,34 +269,34 @@
                 </li>-->
 				<!-- patch comps -->
 				<li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/comps/li Class="CompProperties_Launchable"/cooldownTicks</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/comps/li[@Class="CompProperties_Launchable"]/cooldownTicks</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/comps/li Class="CompProperties_Launchable"/cooldownTicks</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/comps/li[@Class="CompProperties_Launchable"]/cooldownTicks</xpath>
                         <value>
                             <cooldownTicks>3750</cooldownTicks>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/comps/li Class="CompProperties_Launchable"</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/comps/li[@Class="CompProperties_Launchable"]</xpath>
                         <value>
                             <cooldownTicks>3750</cooldownTicks>
                         </value>
                     </nomatch>
                 </li>
 				<li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/comps/li Class="CompProperties_Launchable"/fixedLaunchDistanceMax</xpath>
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/comps/li[@Class="CompProperties_Launchable"]/fixedLaunchDistanceMax</xpath>
 
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/comps/li Class="CompProperties_Launchable"/fixedLaunchDistanceMax</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/comps/li[@Class="CompProperties_Launchable"]/fixedLaunchDistanceMax</xpath>
                         <value>
                             <fixedLaunchDistanceMax>62</fixedLaunchDistanceMax>
                         </value>
                     </match>
 
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="GravShuttle_GravShuttle"]/comps/li Class="CompProperties_Launchable"</xpath>
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/comps/li[@Class="CompProperties_Launchable"]</xpath>
                         <value>
                             <fixedLaunchDistanceMax>62</fixedLaunchDistanceMax>
                         </value>
