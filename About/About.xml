@@ -7,7 +7,7 @@
 		<li>1.5</li>
 		<li>1.6</li>
 	</supportedVersions>
-	<description>Integrates multiple shuttles mods into a seamless experience.</description>
+	<description>Integrates multiple shuttles mods into a -somewhat- seamless experience. Better (rather only) used with Vanilla Vehicles Expanded.</description>
 	<loadAfter>
 		<li>Ludeon.Rimworld</li>
 		<li>Ludeon.Rimworld.Royalty</li>
