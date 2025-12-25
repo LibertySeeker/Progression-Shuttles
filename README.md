@@ -19,6 +19,7 @@ Here is a simple infographic how i categorized the shuttles
 <img width="2396" height="1262" alt="tiered_shuttles" src="https://github.com/user-attachments/assets/b94ffe7f-95e0-4e7b-8f5a-373ac52c9eef" />
 
 And here is a sheet for the exact modding done
-[Shuttles x V Vehicles Framework.pdf](https://github.com/user-attachments/files/24338840/Shuttles.x.V.Vehicles.Framework.pdf)
+![Shuttles x V Vehicles Framework](https://github.com/user-attachments/assets/8260b199-acef-466b-9ce1-d70fed13383a)
+Light yellow is what this mod changes/adds
 
 PS: i dared uses the progression term cuz we all know ferny is cool, and i will take it down if needed. Of Course a better alternative would be for the op ferny or someone else to take it over as i don't think i can improve much on it for lack of technical skills. Although i still have some ideas..
