@@ -81,6 +81,13 @@
                     </nomatch>
                 </li>
                 <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/Plasteel</xpath>
+
+                    <match Class="PatchOperationRemove">
+                        <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/Plasteel</xpath>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
                     <xpath>Defs/ThingDef[defName="JunkShuttle"]/costList/WoodLog</xpath>
 
                     <match Class="PatchOperationReplace">
